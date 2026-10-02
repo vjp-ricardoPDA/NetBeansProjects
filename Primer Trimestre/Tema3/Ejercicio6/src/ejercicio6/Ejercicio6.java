@@ -9,9 +9,10 @@ public class Ejercicio6 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Declaracion de variables y entrada
         Scanner entrada = new Scanner (System.in);
         float nota;
-        
+        //solicitamos la nota del modulo
         System.out.println("Introduzaca la nota de la asignatura");
         nota = entrada.nextFloat();
         
