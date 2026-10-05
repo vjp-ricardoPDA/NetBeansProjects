@@ -15,7 +15,7 @@ public class Ejercicio14 {
         for (num = 0; num <= 100; num ++){ // para todas las situaciones entre el 0 y el 100
             if (num % 2 == 0 && num != 0){ // que cumplan las condiciones de que sean pares (resto de num / 2 es 0)
                 System.out.print(" " + num); // lo imprimimos con un espacio entre numeros
-                if (num == 52){ // y para que la fila no sea eterna a mitad de numeros hacemos un salto de linea
+                if (num == 50){ // y para que la fila no sea eterna a mitad de numeros hacemos un salto de linea
                     System.out.println("");
                 }
             }
