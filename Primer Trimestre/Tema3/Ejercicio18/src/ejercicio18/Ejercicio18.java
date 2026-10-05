@@ -29,7 +29,7 @@ public class Ejercicio18 {
                 System.out.println("Hicieron falta " + fallo + " intentos fallidos");
             }
             
-        } while (fallo <3 && contraseña == intentoAcceso); // mientras fallo sea menor que 3 (el primer intento fallo esta en 0)
+        } while (fallo <3 || contraseña == intentoAcceso); // mientras fallo sea menor que 3 (el primer intento fallo esta en 0)
         
         
         
