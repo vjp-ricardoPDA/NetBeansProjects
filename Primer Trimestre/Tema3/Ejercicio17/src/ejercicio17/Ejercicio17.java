@@ -19,17 +19,18 @@ public class Ejercicio17 {
         */
         
         float numero = 0; // declaramos la variable del usuario
+        Scanner entrada = new Scanner (System.in);
         
         while (numero < 1){ // mientras el numero sea menor que 1 (0 o negativo) 
-            Scanner entrada = new Scanner (System.in);
             System.out.println("Introduzca un numero para calcular su raiz cuadrada: "); //solicitamos el numero al usuario
-
             numero = entrada.nextInt(); // lo guardamos en su variable
 
             if (numero > 0){ // segunda verificacion
                 System.out.print("La raiz cuadrada de " + numero + " es: " ); // antes de modificar nada sacamos el numero del usuario
                 numero = (float)sqrt(numero); // modificamos la variables a su raiz cuadrada
                 System.out.println(numero); // sacamos la raiz cuadrada del numero
+            } else{
+                System.out.println("El numero introducino es negativo o no valido");
             }
         
         
