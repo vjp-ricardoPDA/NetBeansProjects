@@ -16,12 +16,13 @@ public class Ejercicio29 {
         mayor o menor que el que ha introducido.
         • Cuando consiga adivinarlo debe indicárselo e imprimir en pantalla el número de veces que el usuario ha intentado adivinar el número.
         */
+        // se declara el Scanner y las varibales
         Scanner entrada = new Scanner (System.in);
         float aleatorio;
         int prediccion, intentos = 0;
-        aleatorio = (int) (Math.random() * 100 + 1);
         
-        System.out.println(aleatorio);
+        //Creamos el numero aleatorio para adivinarlo
+        aleatorio = (int) (Math.random() * 100 + 1);
         
         do{
             System.out.println("Introduzaca su prediccion: ");
@@ -39,7 +40,7 @@ public class Ejercicio29 {
                 System.out.println("Has adivinado el numero, bien hecho!!!!");
                 System.out.println("El numero de intentos necesarios han sido: " + intentos);
             }
-        } while (aleatorio != prediccion);
+        } while (aleatorio != prediccion); //Mientras ambos numero no coincidan se queda dentro
 
         
         
