@@ -28,7 +28,41 @@ public class Ejercicio8 {
     
     public static void cuentas(int c){
         int cantidad;
-        
+        System.out.println(c + " Euros se descomponen en:");
+
+        cantidad = c / 50;
+        if (cantidad > 0) {
+            System.out.println("Billetes de 50: " + cantidad);
+        }
+        c = c % 50;
+
+        cantidad = c / 20;
+        if (cantidad > 0) {
+            System.out.println("Billetes de 20: " + cantidad);
+        }
+        c = c % 20;
+
+        cantidad = c / 10;
+        if (cantidad > 0) {
+            System.out.println("Billetes de 10: " + cantidad);
+        }
+        c = c % 10;
+
+        cantidad = c / 5;
+        if (cantidad > 0) {
+            System.out.println("Billetes de 5: " + cantidad);
+        }
+        c = c % 5;
+
+        cantidad = c / 2;
+        if (cantidad > 0) {
+            System.out.println("Monedas de 2 euros: " + cantidad);
+        }
+        c = c % 2;
+
+        cantidad = c / 1;
+        if (cantidad > 0) {
+            System.out.println("Monedas de 1 euro: " + cantidad);
         }
     }
     
