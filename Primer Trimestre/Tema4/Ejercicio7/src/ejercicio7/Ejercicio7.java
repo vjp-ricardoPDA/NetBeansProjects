@@ -4,7 +4,7 @@ package ejercicio7;
  */
 
 import java.util.Scanner;
-
+import static orden.Colocacion.menorMayor;
 public class Ejercicio7 {
     /*
         Ejercicio 07.- Escribe un programa en JAVA en el que el usuario introduzca cuatro números enteros (en el main),
@@ -21,9 +21,11 @@ public class Ejercicio7 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //declaramos el scanner y las variables
         Scanner entrada = new Scanner (System.in);
         int num1, num2, num3, num4;
         
+        //Solicitamos cada uno de los numeros
         System.out.println("Introduzca el primer numero: ");
         num1 = entrada.nextInt();
         System.out.println("Introduzca el segundo numero: ");
@@ -33,29 +35,8 @@ public class Ejercicio7 {
         System.out.println("Introduzca el cuarto numero: ");
         num4 = entrada.nextInt();
         
-        orden(num1, num2, num3, num4);    
-    }
-    
-    
-    public static void orden (int n1, int n2, int n3, int n4){
-        int vaso;
-        
-        while (n1 > n2 || n2 > n3 || n3 > n4) {
-            if (n1 > n2){
-                vaso = n1;
-                n1 = n2;
-                n2 = vaso;
-            }if (n2 > n3){
-                vaso = n2;
-                n2 = n3;
-                n3 = vaso;
-            }if (n3 > n4){
-                vaso = n3;
-                n3 = n4;
-                n4 = vaso;
-            }
-        } 
-        System.out.println("el orden de menor a mayor es: " + n1 + n2 + n3 + n4);
+        //llamamos al metodo
+        menorMayor(num1, num2, num3, num4);    
     }
     
 }
