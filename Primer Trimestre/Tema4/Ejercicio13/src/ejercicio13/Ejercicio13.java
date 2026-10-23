@@ -1,20 +1,53 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package ejercicio13;
-
 /**
  *
  * @author alumno
  */
-public class Ejercicio13 {
 
+import java.util.Scanner;
+public class Ejercicio13 {
     /**
      * @param args the command line arguments
      */
+    
+    /*
+    Ejercicio 13.- Realiza un algoritmo que imprima todos los números existentes entre el número 1 y otro introducido por el usuario.
+    • Controla que el usuario te meta un número mayor que 1 y, sino, avísale del error y vuélveselo a pedir las veces que
+    hagan falta. (hasta que introduzca un número mayor que 1)
+    • Crea un método para pedir el número al usuario, otro de tipo booleano para comprobar que el número es mayor que 1 y otro para mostrar el resultado.
+
+    */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        while (comprobar(solicitud()) == false){
+            
+        }
+        
+        
+        
+        
+        
     }
+    
+    public static int solicitud(){
+        Scanner entrada = new Scanner(System.in);
+        int num;
+        System.out.println("Introduzca un numero (mayor que uno): ");
+        num = entrada.nextInt();
+        
+        return num;
+    } 
+    
+    public static boolean comprobar(int n){
+        boolean conclusion = false;
+        if (n <= 1){
+            conclusion = false;
+        } else if (n > 1){
+            conclusion = true;
+        }
+        return conclusion;
+    }
+    
     
 }
