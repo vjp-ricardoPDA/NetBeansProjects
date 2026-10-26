@@ -6,11 +6,6 @@ package ejercicio12;
 
 import java.util.Scanner;
 public class Ejercicio12 {
-
-    /**
-     * @param args the command line arguments
-     */
-    
     /*
     Ejercicio 12.- Realiza un programa que le pida una contraseña al usuario. Si la escribe bien le dará la enhorabuena, 
     pero si la escribe mal 3 veces le dará un mensaje de error de acceso.
@@ -18,7 +13,14 @@ public class Ejercicio12 {
     la comprobación de la contraseña la haremos en otro método de tipo booleano, y el resultado de la comprobación la haremos desde otro método.
     */
     
+    public static final int contrasenia = 1234;
     public static void main(String[] args) {
+        mostrarOpciones();
+        
+        
+        
+    }
+    public static void mostrarOpciones(){
         int intentos = 1;
         boolean objetivo = false;
         while (intentos <= 3 && objetivo == false) {
@@ -33,11 +35,7 @@ public class Ejercicio12 {
                 System.out.println("La contraseña introducida es correcta, numero de intentos fallidos : " + intentos);
             }
         }
-        
-        
-        
     }
-    
     public static int solicitud(){
         Scanner entrada = new Scanner(System.in);
         int intentoPwd;
@@ -49,11 +47,9 @@ public class Ejercicio12 {
     
     public static boolean comprobacion(int n){
         boolean resultado = false;
-        int contraseña = 1234;
-        if (n == contraseña){
+        if (n == contrasenia){
             resultado = true;
         }
-        
         
         return resultado;
     }
