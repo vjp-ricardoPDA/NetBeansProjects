@@ -9,6 +9,21 @@ public class Ejercicio16 {
     /**
      * @param args the command line arguments
      */
+    
+    /*
+    Ejercicio 16.- Crea un programa en JAVA que calcule las siguientes operaciones y muestre su resultado:
+        • Raíz cuadrada de 64.
+        • 8 elevado al cubo.
+        • Exponencial de 2.
+        • Logaritmo de 2,71828.
+        • Menor valor entre 2 y 3.
+        • Valor absoluto de -4,5.
+        • Redondeando -4,5 con ROUND.
+        • Seno de 45 grados.
+    • IMPORTANTE: Cada operación se realizará en un subprograma.
+
+    */
+    
    public static void main(String[] args) {
         System.out.println("Resultados de las operaciones:");
         System.out.println("• Raíz cuadrada de 64: " + obtenerRaizCuadrada(64));

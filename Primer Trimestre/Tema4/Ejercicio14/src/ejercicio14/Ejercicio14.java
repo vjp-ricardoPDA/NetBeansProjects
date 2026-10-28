@@ -9,6 +9,14 @@ public class Ejercicio14 {
     /**
      * @param args the command line arguments
      */
+    /*
+    Ejercicio 14.- Crea un programa en JAVA que que imprima todos los números múltiplos de 3 que existen entre el número 1 y otro
+    número introducido por el usuario.
+    • Controla que el usuario te meta un número mayor que 0 y, sino, avísale del error y vuélveselo al pedir las veces que hagan falta.
+    • Por último infórmale al usuario del total de números mostrados.
+    • Crea un método para pedir el dato al usuario, otro para comprobar que es mayor que 0 y otro para hacer los cálculos y mostrar el resultado.
+    */
+    
     public static void main(String[] args) {
         int numero;
         do {
