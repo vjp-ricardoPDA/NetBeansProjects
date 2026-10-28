@@ -18,35 +18,34 @@ public class Ejercicio13 {
 
     */
     
-    public static void main(String[] args) {
-        
-        while (comprobar(solicitud()) == false){
-            
-        }
-        
-        
-        
-        
-        
+     public static void main(String[] args) {
+        int numero;
+        do {
+            numero = solicitud();
+            if (!comprobar(numero)) {
+                System.out.println("Error: El número debe ser estrictamente mayor que 1. Inténtelo de nuevo.");
+            }
+        } while (!comprobar(numero));
+
+        mostrarResultado(numero);
     }
-    
-    public static int solicitud(){
+
+    public static int solicitud() {
         Scanner entrada = new Scanner(System.in);
-        int num;
-        System.out.println("Introduzca un numero (mayor que uno): ");
-        num = entrada.nextInt();
-        
-        return num;
-    } 
-    
-    public static boolean comprobar(int n){
-        boolean conclusion = false;
-        if (n <= 1){
-            conclusion = false;
-        } else if (n > 1){
-            conclusion = true;
+        System.out.print("Introduzca un número (mayor que uno): ");
+        return entrada.nextInt();
+    }
+
+    public static boolean comprobar(int n) {
+        return n > 1;
+    }
+
+    public static void mostrarResultado(int n) {
+        System.out.println("Los números entre 1 y " + n + " son:");
+        for (int i = 1; i <= n; i++) {
+            System.out.print(i + " ");
         }
-        return conclusion;
+        System.out.println();
     }
     
     
