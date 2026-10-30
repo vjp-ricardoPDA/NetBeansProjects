@@ -28,19 +28,44 @@ public class Ejercicio17 {
     */
     
     public static void main(String[] args) {
-        char letra = generarLetra();
-        System.out.println(letra);
+        int letraAleatoria = generarLetra(); // nosotros siempre usamos y comparamos numeros pero se los traducimos al usuario
+        //System.out.println(letraAleatoria);
+        
+        jugar(letraAleatoria); // una vez tenemos la letra empeiza el jeugo
     }
     
-    
-    public static char generarLetra (){
-        char letra = (char) Math.floor(Math.random() * (122 - 97) + 97);
-        
-        return letra;
+    public static void jugar(int letraAleatoria){
+        int fallos = 0; //el contador de fallos
+        int letraUser;
+        do{
+            letraUser = letraUser(); //inicia el while y almacenamos la letra del usuario para hacer las comprobacones pertinentes
+            
+            if (letraUser < letraAleatoria){ // si la letra introducida es menor se le avisa que su letra esta antes que la oculta en el abecedario
+                System.out.println("La letra introducida tiene una posicion mas temprana que la aleatoria en el abecedario");
+                fallos ++;
+            } else if (letraUser > letraAleatoria){// si la letra introducida es mayor se le avisa que su letra esta despues que la oculta en el abecedario
+                System.out.println("La letra introducida tiene una posicion mas tardia que la aleatoria en el abecedario");
+                fallos ++;
+            } else if (letraUser == letraAleatoria){ // si acierta le enseñamos la letra oculta y el numero de veces que ha fallado
+                System.out.println("Has introducido bien la letra, bien hecho (la letra era " + (char) letraAleatoria + ")");
+                System.out.println("(los intentos necesarios han sido = " + fallos + ")");
+            }
+        }while(letraUser != letraAleatoria);
     }
     
-    public static char letraUser(){
+    public static int generarLetra (){
+        //generamos un numero aleatorio entre 97 y 123 ya que 97 corresponde a la letra a, y el 122 a la z, de tal forma con un numero obtenemos una letra
+        int letra = (int) Math.floor(Math.random() * (123 - 97) + 97);
         
+        return letra; // devolvemos la letra en su forma numerica
+    }
+    
+    public static int letraUser(){ //le pedimos al usuario que introduzca una letra
+        System.out.println("Introduzca la letra que predice: ");
+        Scanner entrada = new Scanner(System.in);
+        char letra = entrada.nextLine().charAt(0); //la posicion 0 (la primera) de la linea introducida
+        int asciiLetra = (int) letra; // lo traducimos a un numero
+        return asciiLetra; // devolvemos el numero
     }
     
     
