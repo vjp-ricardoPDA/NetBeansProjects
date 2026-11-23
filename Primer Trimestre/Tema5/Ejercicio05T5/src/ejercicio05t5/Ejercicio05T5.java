@@ -43,10 +43,18 @@ public class Ejercicio05T5 {
 
     */
     public static void main(String[] args) {
+        Rueda rueda1 = new Rueda ("Aluminio Forjado ", 18);
+        Rueda rueda2 = new Rueda ("Aleacion Magnesio", 17);
+        System.out.println("Rueda1: \n" + rueda1);
+        System.out.println("Rueda2: \n" + rueda2);
         
+        Coche coche1 = new Coche("Honda", "Civic", rueda1);
+        Coche coche2 = new Coche ("Ford", "Mustang", rueda1);
+        Coche coche3 = new Coche("BMW", "M3", rueda2);
         
-        
-        
+        System.out.println("Coche1: \n" + coche1);
+        System.out.println("Coche2: \n" + coche2);
+        System.out.println("Coche3: \n" + coche3);
         
     }
     

@@ -22,6 +22,14 @@ public class Rueda {
     private String material;
     private int pulgadas;
     
+    // Constructor 
+    public Rueda (String mat, int pulg){
+        material = mat;
+        pulgadas = pulg;
+    
+    }
+    
+    
     // Geter y Seter
     
     public String getMaterial(){
@@ -43,7 +51,7 @@ public class Rueda {
     
     //Mostrar datos
     @Override
-    public String ToString(){
+    public String toString(){
         return "Material: " + material 
                 + "\nPulgadas: " + pulgadas;
     }
