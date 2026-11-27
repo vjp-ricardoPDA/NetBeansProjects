@@ -21,7 +21,7 @@ public class Ejercicio19T5 {
     public static void main(String[] args) {
         Empleado e1 = new Empleado("Pepe", 42, 20);
                
-        
+        System.out.println("El importe es: " + e1.calcularNomina(e1.getHoras()));
         
         
         

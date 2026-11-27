@@ -61,13 +61,17 @@ public class Empleado {
         return extra;
     }
     
-    public void calcularNomina(int horas){
+    public double calcularNomina(int horas){
         int extra = calculoHorasExtra(horas);
-        int importe;
+        double importe;
         
+        int ordinarias = horas - extra;
         
+        importe = ordinarias * tarifa;
         
+        importe = importe +(extra * (tarifa * 1.5));
         
+        return importe;
         
     }
     
